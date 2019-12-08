@@ -30,4 +30,4 @@ branches:
 
 env: # 环境变量
  global:
-   - GH_REF: github.com/Molunerfinn/Molunerfinn.github.io.git # 我的仓库地址
+   - GH_REF: github.com/woq/woq.github.io.git # 我的仓库地址
