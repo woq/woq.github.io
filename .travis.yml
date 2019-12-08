@@ -11,7 +11,7 @@ install:
   - npm install
 
 script:
-  - hexo algolia # 我装了algolia的搜索工具。这一步正常可以是 hexo g
+  - hexo g # 我装了algolia的搜索工具。这一步正常可以是 hexo g
 
 
 after_script: # 推送到github的部分
