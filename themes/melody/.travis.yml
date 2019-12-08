@@ -8,7 +8,8 @@ cache:
 
 # S: Build Lifecycle
 install:
-  - npm install # 下载依赖
+  - npm install
+  - npm install hexo-renderer-jade hexo-renderer-stylus --save # 下载依赖
 
 script:
   - hexo algolia # 我装了algolia的搜索工具。这一步正常可以是 hexo g
