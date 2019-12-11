@@ -49,10 +49,11 @@ highlight_theme: default
 # see the icon_name in fontawesome website.
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
-#social:
+social:
 #icon_name fa: url
 #icon_name fab: url
-
+  github fab: https://github.com/woq
+  
 # Algolia search
 # ---------------
 algolia_search:
