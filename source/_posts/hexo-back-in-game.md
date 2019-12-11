@@ -26,8 +26,9 @@ title: BACK IN GAME with HEXO
   * https://nodejs.org
 * CNPM
   * https://npm.taobao.org/
-* git
-  * 设置proxy 具体google
+* 配置一下 Git 免得clone个项目都要登上一年半载的
+    * `git config --global http.proxy 'socks5://127.0.0.1:1080'`
+    * `git config --global https.proxy 'socks5://127.0.0.1:1080'`
 
 
 
@@ -47,7 +48,7 @@ title: BACK IN GAME with HEXO
 
 主题使用与配置看Readme就好了
 
-
+来源嘛 去Github搜索 有很多  看自己喜欢
 
 ## 部署到Github pages
 
@@ -58,7 +59,5 @@ title: BACK IN GAME with HEXO
 ## 遇到的问题
 
 现在构建方法变了，也或许是记忆模糊了... 你自己push源代码上去 然后Travis CI会自动帮你把源代码变成可浏览的网站
-
-
 
 解决方法？ 配置好你的 .travis.yml 就可以了，如果自己安装了其他主题，按照主题提供的demo文件去修改
