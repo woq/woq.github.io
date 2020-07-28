@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: EVE Blog
+title: EVE BLOG
 subtitle: 'EVE RISE'
-description: 'Say Something'
+description: 'Nothing to say'
 keywords:
-author: John Dawn
+author: eve
 language: zh
 timezone: 'HONGKONG'
 
@@ -90,7 +90,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus
+theme: apollo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
