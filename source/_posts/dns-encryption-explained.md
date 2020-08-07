@@ -20,7 +20,7 @@ DNS 是互联网的电话簿；DNS 解析器将人类可读的域名转换为机
 
 基于TLS 的 DNS 和基于 HTTPS 的 DNS 是为加密明文 DNS 流量而开发的两个标准，可以防止恶意方、广告商、ISP 和其他人解读其数据。继续上面的比喻，这些标准的目的是将邮寄的明信片放在信封内，以便任何人都可以寄送明信片，而不必担心有人窥探到明信片的内容。
 
-![基于 TLS 的 DNS](dns-encryption-explained/dns-traffic-over-tls-https-1596783964969.svg)
+![基于 TLS 的 DNS](dns-traffic-over-tls-https.svg)
 
 ## 什么是基于 TLS 的 DNS？
 
