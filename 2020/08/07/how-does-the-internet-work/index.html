@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="什么是互联网在探讨互联网是什么之前，我们必须清楚什么是“网络”。网络是一组彼此连接并能够相互发送数据的计算机。计算机网络很像一个社交圈，即一群互相认识、定期交换信息并共同协调活动的人。 互联网是相互连接、规模庞大且连绵不绝的网络集合。实际上，“互联网”一词源于这样一个概念：相互连接的网络。 由于网络内的计算机相互连接，并且这些网络也都相互连接，因此通过互联网，一台计算机可以与远方网络中的另一台计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="互联网是如何工作的">
+<meta property="og:url" content="https://woq.github.io/2020/08/07/how-does-the-internet-work/index.html">
+<meta property="og:site_name" content="EVE BLOG">
+<meta property="og:description" content="什么是互联网在探讨互联网是什么之前，我们必须清楚什么是“网络”。网络是一组彼此连接并能够相互发送数据的计算机。计算机网络很像一个社交圈，即一群互相认识、定期交换信息并共同协调活动的人。 互联网是相互连接、规模庞大且连绵不绝的网络集合。实际上，“互联网”一词源于这样一个概念：相互连接的网络。 由于网络内的计算机相互连接，并且这些网络也都相互连接，因此通过互联网，一台计算机可以与远方网络中的另一台计算">
+<meta property="og:locale" content="zh">
+<meta property="article:published_time" content="2020-08-07T07:21:09.081Z">
+<meta property="article:modified_time" content="2020-08-07T07:21:09.081Z">
+<meta property="article:author" content="eve">
+<meta property="article:tag" content="internet">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>互联网是如何工作的</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="EVE BLOG" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/08/07/font-family/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/08/07/hypertext-transfer-protocol-http/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://woq.github.io/2020/08/07/how-does-the-internet-work/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&text=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&is_video=false&description=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=互联网是如何工作的&body=Check out this article: https://woq.github.io/2020/08/07/how-does-the-internet-work/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&name=互联网是如何工作的&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://woq.github.io/2020/08/07/how-does-the-internet-work/&t=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是互联网"><span class="toc-number">1.</span> <span class="toc-text">什么是互联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本原理"><span class="toc-number">3.</span> <span class="toc-text">基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据包"><span class="toc-number">3.1.</span> <span class="toc-text">数据包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协议"><span class="toc-number">3.2.</span> <span class="toc-text">协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础硬件"><span class="toc-number">4.</span> <span class="toc-text">基础硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何看到这篇文章"><span class="toc-number">5.</span> <span class="toc-text">如何看到这篇文章</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        互联网是如何工作的
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EVE BLOG</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-08-07T07:21:09.081Z" itemprop="datePublished">2020-08-07</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/base/">base</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/internet/" rel="tag">internet</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="什么是互联网"><a href="#什么是互联网" class="headerlink" title="什么是互联网"></a>什么是互联网</h2><p>在探讨互联网是什么之前，我们必须清楚什么是“网络”。网络是一组彼此连接并能够相互发送数据的计算机。计算机网络很像一个社交圈，即一群互相认识、定期交换信息并共同协调活动的人。</p>
+<p>互联网是相互连接、规模庞大且连绵不绝的网络集合。实际上，“互联网”一词源于这样一个概念：<em>相互</em>连接的<em>网络</em>。</p>
+<p>由于网络内的计算机相互连接，并且这些网络也都相互连接，因此通过互联网，一台计算机可以与远方网络中的另一台计算机通信。这样，使得世界各地的计算机之间快速交换信息成为可能。</p>
+<p>计算机通过线缆、无线电波和其他类型的网络基础设施相互连接并与互联网连接。通过互联网发送的所有数据都被转换为光或电脉冲（也称为“位”），然后由接收计算机进行解释。线缆和无线电波以光速传导这些位。一次可以越过这些线缆的位数越多，互联网的运行速度就越快。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>要了解Internet，可以将其视为具有两个主要组件的系统。这些组件中的第一个是<strong>硬件</strong>。包括从每秒传输信息的电缆到坐在您面前的计算机的所有内容。</p>
+<p>支持Internet的其他类型的硬件包括<em>路由器</em>，<em>交换机</em>，<em>服务器</em>，<em>基站</em>，<em>卫星</em>，<em>无线电</em>，<em>智能手机</em>和其他设备。所有这些设备共同构成了网络。互联网是可延展的系统-随着元素加入和离开世界各地的网络，互联网几乎没有变化。这些元素中的某些元素可能保持相当静态，并构成Internet的骨干。其他则更为外围。</p>
+<p>Internet的第二个组成部分：协议，所有这些硬件都无法创建网络。<strong>协议</strong>是计算机完成任务所遵循的规则集。如果连接到Internet的所有计算机没有都必须遵循的一组通用协议，则设备之间的通信将无法进行。各种机器将无法相互理解，甚至无法以有意义的方式发送信息。协议为机器提供了用于传输数据的方法和通用语言。</p>
+<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>互联网运作的基本原理包含两个主要概念：<em>数据包</em>和<em>协议</em>。</p>
+<h3 id="数据包"><a href="#数据包" class="headerlink" title="数据包"></a>数据包</h3><p>在网络中，数据包是较大消息的一小部分。每个数据包都包含数据和有关该数据的信息。有关数据包内容的信息称为“标头”，它位于数据包的最前面，以便接收方机器知道如何处理数据包。若要了解数据包标头的用途，可以想一下某些消费类产品是如何随附组装说明的。</p>
+<p>当数据通过互联网发送时，它首先分解为较小的数据包，接着转换为位。数据包通过各种网络设备（如路由器和交换机）路由到其目的地。当数据包到达目的地时，接收设备会按顺序重组数据包，然后可以使用或显示数据。</p>
+<p>这个过程可与美国自由女神像的建造进行类比。自由女神像最初是在法国设计和建造的。但是，它尺寸太大，无法装到船上，因此它被分块运送到美国，并附上有关每一块所属位置的说明。收到这些块的工人将它们重新组装成今天矗立在纽约的雕像。</p>
+<p>运送自由女神像花了很长时间，但通过互联网以较小的片段发送数字信息的速度非常快。例如，存储在 Web 服务器上的自由女神像照片可以一次发送一个数据包，跨越整个地球并加载到某人的计算机上，整个过程只需几毫秒。</p>
+<p>数据包使用称为数据包交换的技术通过互联网发送。中间路由器和交换机能够彼此独立地处理数据包，无需考虑其来源或目的地。这是设计使然，没有哪个连接可以独霸网络。如果不进行数据包交换，一次在计算机之间发送数据，那么两台计算机之间的连接可能会在数分钟内占用数条线缆，以及多台路由器交换机。基本上，一次只能有两个人可以使用互联网，而不是像现实中那样人数不限。</p>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>连接两台可能使用不同硬件并运行不同软件的计算机，是互联网缔造者必须解决的主要挑战之一。这需要使用所有连接的计算机都可理解的通信技术，就像在世界上不同地区长大的两个人可能需要说一种通用语言才能互相理解一样。</p>
+<p>这个问题可标准化协议解决。在网络中，协议是执行某些操作和格式化数据的标准化方法，以便两个或更多设备能够相互通信并相互理解。</p>
+<p>协议有多种，用于在同一网络（以太网）上的设备之间发送数据包，在网络之间(IP)发送数据包，确保这些数据包成功按顺序到达（<code>TCP</code>），以及为网站和应用程序格式化数据（<code>HTTP</code>）等。除了这些基本协议之外，还有用于路由、测试和加密的协议。对于不同类型的内容，也有上述协议的替代协议。例如，流视频通常使用 <code>UDP</code>而不是 <code>TCP</code>。</p>
+<p>所有连入互联网的计算机和其他设备都可以解释和理解这些协议，所以无论连接的是什么，互联网都可以正常工作。</p>
+<h2 id="基础硬件"><a href="#基础硬件" class="headerlink" title="基础硬件"></a>基础硬件</h2><p>许多不同种类的硬件和基础设施使互联网能为众人所用。其中一些最重要的类型包括：</p>
+<ul>
+<li>路由器根据目的地将数据包转发到其他计算机网络。路由器就像是互联网上的交通警察，确保互联网流量流向正确的网络。</li>
+<li>交换机连接共享一个网络的多个设备。它们使用数据包交换将数据包转发到正确的设备。它们也从这些设备接收出站数据包，并将它们传递到正确的目的地。</li>
+<li>Web 服务器是特殊的高性能计算机，除了托管应用程序和数据库外，还可以存储内容（网页、图像和视频等）并提供给用户。服务器也响应 DNS 查询并执行其他重要任务，使互联网保持正常运作。大多数服务器都保管在遍布全球的大型数据中心中。</li>
+</ul>
+<h2 id="如何看到这篇文章"><a href="#如何看到这篇文章" class="headerlink" title="如何看到这篇文章"></a>如何看到这篇文章</h2><p>我们以本文为例。为了让您看到这篇文章，它以数千数据包的形式通过互联网逐个片段发送。这些数据包通过线缆和无线电波穿过路由器和交换机，从我们的Web 服务器一路传输到您的计算机或设备。您的计算机或智能手机收到这些数据包，并将它们传递到设备的浏览器，然后浏览器会解释这些数据包中的数据，以显示您正在阅读的文字。</p>
+<p>此过程涉及的具体步骤有：</p>
+<ol>
+<li><strong>DNS 查询：</strong>当您的浏览器开始加载本网页时，首先可能进行 DNS 查询以查找 EVE BLOG 网站的IP地址。</li>
+<li><strong>TCP 握手：</strong>浏览器打开与这个 IP 地址的连接。</li>
+<li><strong>TLS 握手：</strong>浏览器也在 EVE BLOG Web 服务器和您的设备之间设置加密，使攻击者无法读取这两个端点之间传输的数据包。</li>
+<li><strong>HTTP 请求：</strong>浏览器请求此网页上显示的内容。</li>
+<li><strong>HTTP 响应：</strong>EVE BLOG 的服务器以HTML、CSS 和 JavaScript 代码的形式传输内容，并分解为一系列数据包。一旦您的设备接收到数据包并验证已收到所有数据包，浏览器就会解释数据包中包含的 HTML、CSS 和 JavaScript 代码，以呈现有关互联网工作原理的本文。整个过程只需一两秒。</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是互联网"><span class="toc-number">1.</span> <span class="toc-text">什么是互联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本原理"><span class="toc-number">3.</span> <span class="toc-text">基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据包"><span class="toc-number">3.1.</span> <span class="toc-text">数据包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#协议"><span class="toc-number">3.2.</span> <span class="toc-text">协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础硬件"><span class="toc-number">4.</span> <span class="toc-text">基础硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何看到这篇文章"><span class="toc-number">5.</span> <span class="toc-text">如何看到这篇文章</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://woq.github.io/2020/08/07/how-does-the-internet-work/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&text=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&is_video=false&description=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=互联网是如何工作的&body=Check out this article: https://woq.github.io/2020/08/07/how-does-the-internet-work/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&title=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://woq.github.io/2020/08/07/how-does-the-internet-work/&name=互联网是如何工作的&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://woq.github.io/2020/08/07/how-does-the-internet-work/&t=互联网是如何工作的" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2020
+    eve
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
